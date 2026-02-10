@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Duration Demo</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <main id="app">
+        <header>
+            <h1>Travel Duration Demo</h1>
+            <p>
+            <ol>
+                <li>Allow location when prompted</li>
+                <li>Enter the destination</li>
+                <li>Choose mode of transportation</li>
+            </ol>
+            </p>
+        </header>
+        <section>
+            <label for="destination">Destination:</label>
+            <input id="destination" autocomplete="off">
+            <div>
+                <select id="modeSelect">
+                    <option value="DRIVING">Car</option>
+                    <option value="BICYCLING">Bike</option>
+                    <option value="TRANSIT">Train</option>
+                    <option value="WALKING">Walking</option>
+                </select>
+                <button id="getDuration">Get Travel Duration</button>
+            </div>
+        </section>
+        <section id="result"></section>
+        <div id="map" role="application" aria-label="Map"></div>
+    </main>
+    <script src="src/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=%VITE_API_KEY%&callback=initMap&libraries=places" async
+        defer></script>
+</body>
+
+</html>
