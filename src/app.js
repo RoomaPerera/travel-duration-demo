@@ -31,6 +31,9 @@ const getUserLocation = () => {
                 resolve({ latitude, longitude });
             },
             (error) => {
+                if (error.code === error.PERMISSION_DENIED) {
+                    console.error("User or System denied Geolocation.");
+                }
                 reject(error);
             },
             (options)
